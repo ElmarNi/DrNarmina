@@ -28,7 +28,10 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-2 logo">
-                    <a href="#"><img src="img/logo.png" alt=""></a>
+                    <a href="#">
+                        <img src="img/logo.png" alt="">
+                        <img src="img/logo-c.png" alt="">
+                    </a>
                 </div>
                 <div class="col-lg-10 text-right p-0">
                     <ul class="menu">
@@ -59,7 +62,7 @@
 
     <section id="slider">
         <div class="owl-carousel owl-theme">
-            <div class="item" style="background-image: url(img/slide01.jpg);">
+            <div class="item">
                 <div id="scene">
                     <div class="layer" data-depth=".3">
                         <div class="cloud cloudFirst">
@@ -67,6 +70,7 @@
                         </div>
                     </div>
                 </div>
+                <img src="img/slide01.jpg" class="main-image" alt="">
                 <div class="content">
                     <p>Lorem ipsum dolor sit amet</p>
                     <h1>Lorem ipsum dolor sit,<br> <b>consectetur amet.</b></h1>
@@ -159,48 +163,61 @@
                 <div class="col-12">
                     <ul>
                         <li>
-                            <a href="#" class="main-a">
-                                <img src="img/g1.jpg" alt="">
+                            <img id="i" src="img/g1.jpg" alt="">
+                            <a href="#">
+                                <div class="overlay">
+                                    <p>Daha ətraflı</p>
+                                </div>
                             </a>
-                            <div class="overlay">
-                                <a href="#">Daha ətraflı</a>
-                            </div>
                         </li>
                         <li>
-                            <a href="#" class="main-a">
-                                <img src="img/g1.jpg" alt="">
+                            <img src="img/g1.jpg" alt="">
+                            <a href="#">
+                                <div class="overlay">
+                                    <p>Daha ətraflı</p>
+                                </div>
                             </a>
-                            <div class="overlay">
-                                <a href="#">Daha ətraflı</a>
-                            </div>
                         </li>
                         <li>
-                            <a href="#" class="main-a">
-                                <img src="img/g1.jpg" alt="">
+                            <img src="img/g1.jpg" alt="">
+                            <a href="#">
+                                <div class="overlay">
+                                    <p>Daha ətraflı</p>
+                                </div>
                             </a>
-                            <div class="overlay">
-                                <a href="#">Daha ətraflı</a>
-                            </div>
                         </li>
                         <li>
-                            <a href="#" class="main-a">
-                                <img src="img/g1.jpg" alt="">
+                            <img src="img/g1.jpg" alt="">
+                            <a href="#">
+                                <div class="overlay">
+                                    <p>Daha ətraflı</p>
+                                </div>
                             </a>
-                            <div class="overlay">
-                                <a href="#">Daha ətraflı</a>
-                            </div>
                         </li>
                         <li>
-                            <a href="#" class="main-a">
-                                <img src="img/g1.jpg" alt="">
+                            <img src="img/g1.jpg" alt="">
+                            <a href="#">
+                                <div class="overlay">
+                                    <p>Daha ətraflı</p>
+                                </div>
                             </a>
-                            <div class="overlay">
-                                <a href="#">Daha ətraflı</a>
-                            </div>
                         </li>
                     </ul>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section id="calltoaction">
+        <div class="form-wrapper">
+            <h1>Lorem ipsum</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum, consequuntur omnis voluptas doloribus perspiciatis repellendus facilis et similique distinctio.</p>
+            <form action="post">
+                <input type="text" placeholder="Adınız, Soyadınız">
+                <input type="text" placeholder="Əlaqə nömrəniz">
+                <input type="submit" value="Göndər">
+            </form>
+            <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis veritatis molestias labore nostrum obcaecati.</h6>
         </div>
     </section>
 
@@ -213,11 +230,11 @@
     <!-- owlCarousel -->
     <script src="owlCarousel/owl.carousel.min.js"></script>
     <script src="js/parallax.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
+
     <!-- Mine js -->
     <script src="js/main.js"></script>
-    <script> 
-        // parallax clouds
-    
+    <script>
         var scene = document.getElementById('scene')
         var parallax = new Parallax(scene);
     </script>

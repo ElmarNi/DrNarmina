@@ -18,6 +18,9 @@ a:hover {
 #large-screen-header .logo img {
   max-width: 100%;
 }
+#large-screen-header .logo img:last-child {
+  display: none;
+}
 #large-screen-header ul.menu {
   padding: 0;
   margin: 0;
@@ -128,6 +131,12 @@ a:hover {
   background-color: white;
   border-color: #d6e0ee;
 }
+#large-screen-header.active .logo img {
+  display: none;
+}
+#large-screen-header.active .logo img:last-child {
+  display: block;
+}
 #large-screen-header.active ul.menu li a {
   color: #24243B;
   -webkit-transition: all .2s ease;
@@ -143,6 +152,11 @@ a:hover {
   background-color: #f8f8f8;
 }
 
+#large-screen-header .get-offer a:hover {
+  background-color: #42464e;
+  color: white;
+}
+
 #slider {
   position: relative;
   height: 900px;
@@ -152,10 +166,14 @@ a:hover {
   margin-top: -290px;
   margin-left: -240px;
 }
-#slider img.slide {
+#slider #scene {
   position: absolute;
-  top: 0%;
+  top: 0;
+  overflow: hidden;
+}
+#slider img.main-image {
   z-index: -1;
+  width: auto;
 }
 #slider #scene img {
   width: auto;
@@ -356,18 +374,20 @@ a:hover {
 }
 #gallery ul li {
   position: relative;
+  overflow: hidden;
 }
-#gallery ul li a.main-a {
-  display: block;
-}
-#gallery ul li a.main-a img {
+#gallery ul li img {
   width: 228px;
   height: 228px;
   -o-object-fit: cover;
      object-fit: cover;
 }
+#gallery ul li a {
+  color: black;
+}
 #gallery ul li .overlay {
-  adding: 30px;
+  padding: 30px;
+  padding-bottom: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -377,13 +397,107 @@ a:hover {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  opacity: 0.7;
   position: absolute;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0.8) 0px);
+  background: linear-gradient(rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0.6) 0px);
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+#gallery ul li .overlay p {
+  margin: 0;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 11px 33px;
+  cursor: pointer;
+  text-align: center;
+  color: white;
+  border-radius: 24px;
+  background: #4ba82e;
+  -webkit-box-shadow: rgba(75, 168, 46, 0.3) 0px 4px 8px;
+          box-shadow: rgba(75, 168, 46, 0.3) 0px 4px 8px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+#gallery ul li .overlay p:hover {
+  border-color: #34861c;
+  background: #34861c;
+}
+#gallery ul li:hover .overlay {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+#calltoaction {
+  position: relative;
+  z-index: 1;
+  padding: 100px 85px;
+  background-image: url("../img/calltoaction.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+#calltoaction::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.2);
+}
+#calltoaction .form-wrapper {
+  max-width: 640px;
+  padding: 60px;
+  background: #fff;
+  border-radius: 13px;
+}
+#calltoaction .form-wrapper h1 {
+  font-size: 40px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+#calltoaction .form-wrapper p {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+#calltoaction .form-wrapper h6 {
+  margin-bottom: 0;
+  color: #6c757d !important;
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: 300;
+}
+#calltoaction .form-wrapper form input[type="text"], #calltoaction .form-wrapper form input[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 16px 32px;
+  font-size: 14px;
+  color: #495057;
+  background-color: #f2f2f2;
+  background-clip: padding-box;
+  border: none;
+  outline: none;
+  margin-top: 15px;
+}
+#calltoaction .form-wrapper form input[type="submit"] {
+  background: #ab1237;
+  font-weight: 900;
+  margin-top: 50px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 18px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+#calltoaction .form-wrapper form input[type="submit"]:hover {
+  background: #971833;
 }
 
 @media (min-width: 1200px) {

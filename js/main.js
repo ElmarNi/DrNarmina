@@ -19,4 +19,15 @@ $(document).ready(function () {
       $("#large-screen-header").removeClass("active")
     }
   });
+
+  if ($(window).width() < 1630) {
+    let circleLeft = parseInt($("#slider .circle").css("margin-left").substring(0, 4))
+    let defaultWidth = 1630;
+    let currentWidth = $(window).width();
+    let imageNewleft = defaultWidth - currentWidth
+    let circleNewLeft = circleLeft - (defaultWidth - currentWidth);
+    $("#slider .circle").css("margin-left", `${circleNewLeft}px`)
+    $("#slider .main-image").css("margin-left", `-${imageNewleft}px`)
+  }
+  
 });
