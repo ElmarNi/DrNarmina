@@ -14,8 +14,25 @@ a:hover{
     .logo{
         img{
             max-width: 100%;
-            &:last-child{
-                display: none;
+            height: 80px;
+        }
+        img.colored{
+            display: none;
+        }
+        a{
+            position: relative;
+            display: block;
+            p{
+                margin: 0;
+                color: white;
+                top: 50%;
+                font-size: 12px;
+                text-align: center;
+                transform: translateY(-50%);
+                position: absolute;
+                left: 79px;
+                line-height: 15px;
+                width: fit-content;
             }
         }
     }
@@ -30,6 +47,10 @@ a:hover{
                 color: white;
                 font-weight: 500;
                 font-size: 14px;
+                transition: all .2s ease;
+                &:hover{
+                    opacity: .7;
+                }
             }
         }
     }
@@ -44,7 +65,7 @@ a:hover{
             margin-left: 4px;
             .dropdown__icon {
                 fill: none;
-                stroke: #c21416;
+                stroke: white;
                 stroke-width: 1.5px;
                 fill-rule: evenodd;
             }
@@ -110,7 +131,7 @@ a:hover{
             font-size: 14px;
             border-radius: 5px;
             padding: 9px 12px;
-            letter-spacing: 1px;
+            letter-spacing: .3px;
             transition: all .2s ease;
             font-weight: 500;
             &:hover{
@@ -126,24 +147,27 @@ a:hover{
     .logo{
         img{
             display: none;
-            &:last-child{
-                display: block;
-            }
+        }
+        img.colored{
+            display: block;
+        }
+        p{
+            color: #0c8aa1 !important;
         }
     }
     ul.menu li a{
         color: #24243B;
-        transition: all .2s ease;
-        &:hover{
-            opacity: .7;
-        }
     }
     .lang a{
         color: #24243B;
     }
     .get-offer a{
-        background-color: #f8f8f8;
+        background-color: #44c373;
+        color: white;
     }
+}
+#large-screen-header.active .lang svg .dropdown__icon{
+    stroke: black;
 }
 #large-screen-header .get-offer a:hover {
     background-color: #42464e;
@@ -176,7 +200,7 @@ a:hover{
     }
     .content{
         position: absolute;
-        top: 37%;
+        top: 50%;
         transform: translateY(-50%);
         p{
             text-transform: uppercase;
@@ -209,8 +233,7 @@ a:hover{
     }
 }
 #about{
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding: 155px 0;
     .left{
         .image-wrapper{
             border-radius: 100%;
@@ -341,6 +364,7 @@ a:hover{
 }
 #gallery{
     padding: 60px 0;
+    background-color: #f6f6f6;
     ul{
         list-style: none;
         padding: 0;
@@ -377,7 +401,7 @@ a:hover{
                     font-size: 14px;
                     text-transform: uppercase;
                     font-weight: bold;
-                    padding: 11px 33px;
+                    padding: 11px 32px;
                     cursor: pointer;
                     text-align: center;
                     color: rgb(255, 255, 255);
@@ -402,7 +426,7 @@ a:hover{
 #calltoaction{
     position: relative;
     z-index: 1;
-    padding: 100px 85px;
+    padding: 40px 85px;
     background-image: url('../img/calltoaction.jpg');
     background-size: cover;
     background-position: center center;
@@ -418,25 +442,20 @@ a:hover{
         background: rgba(0,0,0,.2);
     }
     .form-wrapper{
-        max-width: 640px;
+        max-width: 475px;
         padding: 60px;
         background: #fff;
         border-radius: 13px;
         h1{
-            font-size: 40px;
+            font-size: 26px;
             font-weight: 900;
             text-transform: uppercase;
         }
         p{
             margin-top: 30px;
             margin-bottom: 30px;
-        }
-        h6{
-            margin-bottom: 0;
-            color: #6c757d!important;
-            margin-top: 15px;
-            font-size: 16px;
-            font-weight: 300;
+            font-size: 14px;
+            color: #6c757d;
         }
         form{
             input[type="text"], input[type="submit"]{
@@ -452,9 +471,9 @@ a:hover{
                 margin-top: 15px;
             }
             input[type="submit"]{
-                background: #ab1237;
+                background: #44c373;
                 font-weight: 900;
-                margin-top: 50px;
+                margin-top: 15px;
                 color: white;
                 text-transform: uppercase;
                 font-size: 18px;
@@ -470,7 +489,7 @@ a:hover{
     .row{
         margin-right: 0;
     }
-    padding-top: 60px;
+    padding: 60px 0;
     .col-lg-3, .col-lg-6{
         padding: 0 5px;
     }
@@ -481,8 +500,9 @@ a:hover{
         .image-wrapper{
             img{
                 width: 100%;
-                height: 292px;
+                height: 278px;
                 transition: all .2s ease-in-out;
+                object-fit: cover;
             }
         }
         a{
@@ -498,18 +518,21 @@ a:hover{
             font-size: 11px;
             text-transform: uppercase;
             color: #fff;
-            letter-spacing: 1px;
+            letter-spacing: 0.3px;
             z-index: 1;
             background: rgba(0,0,0,.2);
-            padding: 4px 12px 4px 12px;
             max-width: calc(100% - 26px);
             transition: all .3s ease;
             &:hover{
                 background: rgba(0,0,0,.3);
             }
+            a{
+                padding: 4px 12px 4px 12px;
+                display: block;
+            }
         }
         .post-infos{
-            background: linear-gradient(-180deg, rgba(146, 137, 132, 0) 3%, #dbdad9 47%);
+            background: linear-gradient(-180deg, rgba(146, 137, 132, 0) 3%, #000000 47%);
             width: 100%;
             left: 0;
             bottom: 0;
@@ -520,7 +543,7 @@ a:hover{
                 display: block;
                 font-size: 22px;
                 line-height: 26px;
-                color: rgb(44, 44, 44);
+                color: white;
                 font-weight: 700;
                 font-size: 20px;
                 word-break: break-word;
@@ -532,13 +555,13 @@ a:hover{
             display: flex;
             justify-content: space-between;
             align-items: center;
-            i{
-                padding: 8px 10px;
-                font-size: 17px;
-                cursor: pointer;
-                transform: translateY(-1px);
-            }
+            
             .like{
+                padding: 6px 8px;
+                border-radius: 12px;
+                font-weight: 700;
+                font-size: 14px;
+                cursor: pointer;
                 transition: all .3s ease;
                 border-radius: 12px;
                 &:hover{
@@ -548,12 +571,153 @@ a:hover{
             .like.active{
                 background: hsla(0,0%,100%,.3);
             }
+            .view{
+                font-size: 14px;
+                font-weight: 700;
+                color: white;
+                padding: 6px 8px;
+            }
+            .view svg{
+                transform: scale(1.2);
+            }
         }
     }
     .item:hover{
         img{
             transform: scale(1.01);
             filter: brightness(70%);
+        }
+    }
+}
+footer{
+    background-color: #2a2a2a;
+    padding: 60px 0;
+    .top{
+        .working-hours{
+            color: #a5a5a5;
+            margin: 0;
+            font-size: 14px;
+        }
+        .number{
+            color: white;
+            font-size: 22px;
+            margin: 0;
+            font-weight: bold;
+            margin-top: 4px;
+            a{
+                color: inherit
+            }
+            span{
+                color: #44c373;
+            }
+        }
+        .get-offer{
+            color: #c7c7c7;
+            display: inline-block;
+            background: url(../img/underline.png) center bottom repeat-x;
+            font-size: 14px;
+            a{
+                color: inherit;
+            }
+            &:hover{
+                color: white;
+                background: none;
+            }
+        }
+        .info{
+            a{
+                line-height: 16px;
+                font-weight: 600;
+                font-size: 15px;
+                text-transform: uppercase;
+                color: white;
+            }
+            i{
+                color: #44c373;
+                margin-right: 15px;
+                font-size: 30px;
+                transform: translateY(-1px);
+            }
+        }
+    }
+    .line{
+        .col-12{
+            border-bottom: 1px solid #3e3e3e;
+            margin-top: 32px;
+            margin-bottom: 44px;
+        }
+    }
+    .bottom{
+        .menu-items{
+            h1{
+                font-size: 18px;
+                line-height: 24px;
+                font-weight: 600;
+                text-transform: uppercase;
+                margin-bottom: 14px;
+                color: white;
+            }
+            ul{
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                li{
+                    a{
+                        display: block;
+                        color: #c7c7c7;
+                        font-size: 13px;
+                        line-height: 24px;
+                        transition: all .3s ease;
+                        &:hover{
+                            color: #44c373;
+                        }
+                    }
+                }
+            }
+        }
+        .button-wrapper{
+            a{
+                display: block;
+                border: 1px solid white;
+                width: 206px;
+                height: 54px;
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 14px;
+                line-height: 52px;
+                color: #c7c7c7;
+                margin-left: auto;
+                transition: all .3s ease;
+                i{
+                    font-size: 20px;
+                    margin-right: 20px;
+                    color: white;
+                    transform: translateY(2px);
+                }
+                &:hover{
+                    border-color: #44c373;
+                    background-color: #44c373;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+.copyright{
+    font-size: 13px;
+    color: #c7c7c7;
+    background-color: #1c1c1c;
+    height: 84px;
+    a{
+        color: inherit;
+        span{
+            transition: all .3s ease;
+        }
+        &:hover{
+            span{
+                color: #44c373;
+            }
         }
     }
 }
