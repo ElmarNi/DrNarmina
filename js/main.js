@@ -29,5 +29,8 @@ $(document).ready(function () {
     $("#slider .circle").css("margin-left", `${circleNewLeft}px`)
     $("#slider .main-image").css("margin-left", `-${imageNewleft}px`)
   }
-  
+  $("#blog .like").click(function(e){
+    e.preventDefault()
+    $(this).toggleClass("active")
+  })
 });

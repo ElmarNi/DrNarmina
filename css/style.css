@@ -500,6 +500,107 @@ a:hover {
   background: #971833;
 }
 
+#blog {
+  padding-top: 60px;
+}
+#blog .row {
+  margin-right: 0;
+}
+#blog .col-lg-3, #blog .col-lg-6 {
+  padding: 0 5px;
+}
+#blog .item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 7px;
+}
+#blog .item .image-wrapper img {
+  width: 100%;
+  height: 292px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+#blog .item a {
+  color: inherit;
+}
+#blog .item .category {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  border-radius: 100px;
+  line-height: 20px;
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 1px;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 4px 12px 4px 12px;
+  max-width: calc(100% - 26px);
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+#blog .item .category:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+#blog .item .post-infos {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(3%, rgba(146, 137, 132, 0)), color-stop(47%, #dbdad9));
+  background: linear-gradient(-180deg, rgba(146, 137, 132, 0) 3%, #dbdad9 47%);
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  padding: 105px 17px 13px;
+  border-radius: 6px;
+  position: absolute;
+}
+#blog .item .post-infos p {
+  display: block;
+  font-size: 22px;
+  line-height: 26px;
+  color: #2c2c2c;
+  font-weight: 700;
+  font-size: 20px;
+  word-break: break-word;
+  z-index: 15;
+  margin-bottom: 12px;
+}
+#blog .item .like-view {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#blog .item .like-view i {
+  padding: 8px 10px;
+  font-size: 17px;
+  cursor: pointer;
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+}
+#blog .item .like-view .like {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  border-radius: 12px;
+}
+#blog .item .like-view .like:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+#blog .item .like-view .like.active {
+  background: rgba(255, 255, 255, 0.3);
+}
+#blog .item:hover img {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+  -webkit-filter: brightness(70%);
+          filter: brightness(70%);
+}
+
 @media (min-width: 1200px) {
   .container {
     max-width: 1170px;
